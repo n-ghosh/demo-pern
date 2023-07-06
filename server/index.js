@@ -9,6 +9,8 @@ app.use(express.json()) // access the request body
 
 
 // ROUTES
+// the request object represents the HTTP request and has properties for the request query string, parameters, body, HTTP headers, and so on.
+// the response object represents the HTTP response that an Express app sends when it gets an HTTP request.
 
 // create a todo
 app.post("/todos", async (req, res) => {
@@ -35,7 +37,7 @@ app.get("/todos", async (req, res) => {
     }
 });
 
-// get a todo
+// get a specific todo
 app.get("/todos/:id", async (req, res) => {
     try {
         const { id } = req.params;
